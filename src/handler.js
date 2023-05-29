@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 const { nanoid } = require('nanoid');
 const notes = require('./notes');
 
@@ -10,7 +9,12 @@ const addNotesHandler = (request, h) => {
   const updatedAt = createdAt;
 
   const newNote = {
-    title, tags, body, id, createdAt, updatedAt,
+    title,
+    tags,
+    body,
+    id,
+    createdAt,
+    updatedAt,
   };
   notes.push(newNote);
 
